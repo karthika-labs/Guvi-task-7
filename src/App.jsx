@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
-import {BrowserRouter, Routes,Route} from "react-router-dom"
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+
 import { Navigate } from 'react-router-dom'
 import Home from './Home'
 import OverView from './OverView'
@@ -48,7 +49,7 @@ let handleRemove=(movie)=>{
   return (
   <>
    <UserProvider>
-  < BrowserRouter>
+  < Router>
   <Routes>
      {/* Redirect from "/" to "/movies" */}
     <Route path="/"  element={<Navigate to="movies" replace />}/>
@@ -60,7 +61,7 @@ let handleRemove=(movie)=>{
 
    
   </Routes>
-  </BrowserRouter>
+  </Router>
   </ UserProvider>
   
   </>
