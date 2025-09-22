@@ -150,7 +150,7 @@ function Home({ handleFavorites, handleRemove, favorites }) {
       <header className="relative z-10 sticky top-0 bg-black">
         <div className="flex justify-between p-4 items-center gap-4">
           <img
-            src="./public/logo.webp"
+            src="/logo.webp"
             className="  w-8 h-8 aspect-square"
           ></img>
           <div className="flex items-center">
