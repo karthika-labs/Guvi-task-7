@@ -149,11 +149,7 @@ function Home({ handleFavorites, handleRemove, favorites }) {
     <div className="righteous-regular h-full p-6 max-w-7xl bg-black mx-auto">
       <header className="relative z-10 sticky top-0 bg-black">
         <div className="flex justify-between p-4 items-center gap-4">
-          <img
-            src="../public/logo.webp"
-            alt="logo"
-            className="  w-8 h-8 aspect-square"
-          ></img>
+         <img src={`${process.env.PUBLIC_URL}/logo.webp`} alt="logo" />
           <div className="flex items-center">
             {/* Search Icon */}
             <svg
