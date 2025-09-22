@@ -11,7 +11,7 @@ function OverView() {
     const getData = async () => {
       try {
         let result = await axios.get(
-          `http://www.omdbapi.com/?i=${imdbID}&apikey=73365880`
+          `https://www.omdbapi.com/?i=${imdbID}&apikey=73365880`
         );
         setDetails(result.data);
       } catch (error) {

@@ -12,7 +12,7 @@ const[totalResults,setTotalResults]=useState(0)
     const fetchData = async () => {
       try {
         let getData = await axios.get(
-          "http://www.omdbapi.com/?s=batman&apikey=73365880"
+          "https://www.omdbapi.com/?s=batman&apikey=73365880"
         );
         setMovies(getData.data.Search);
         setTotalResults(parseInt(getData.data.totalResults))

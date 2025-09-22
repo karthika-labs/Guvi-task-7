@@ -1,34 +1,4 @@
-// import { useEffect, useState } from "react";
-// import Card from "./Card";
 
-
-// function Favorites({handleFavorites,favorites,handleRemove}) {
-
-//   const [loading, setLoading] = useState(true); 
-
- 
-   
-
-
-//   return (
-//     <>  <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 grid-cols-1 px-6 justify-center bg-black h-screen">
-//         {favorites && favorites.length > 0 ?(favorites.map((movie, index) => {
-//           return (
-//             <div key={index} className=" flex justify-center   ">
-//               <Card movie={movie} handleFavorites={handleFavorites} favorites={favorites} handleRemove={handleRemove}></Card>
-//             </div>
-//           );
-//         })
-//         ):(
-//              <p className="text-white ">No favorites added yet.</p>
-//         )
-//     }
-//       </div>
-      
-//     </>
-//   );
-// }
-// export default Favorites;
 
 import { useEffect, useState } from "react";
 import Card from "./Card";

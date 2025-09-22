@@ -10,7 +10,7 @@ function Card({ movie, handleFavorites, favorites, handleRemove }) {
   useEffect(() => {
     const fetchPlot = async () => {
       try {
-        const res = await axios.get("http://www.omdbapi.com/", {
+        const res = await axios.get("https://www.omdbapi.com/", {
           params: { i: movie.imdbID, apikey: "73365880" },
         });
         console.log("plot fetched succeessfully", res.data.Plot);

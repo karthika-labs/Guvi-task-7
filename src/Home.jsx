@@ -44,7 +44,7 @@ function Home({ handleFavorites, handleRemove, favorites }) {
       setQueryOptions( {...queryOptions,search:searchText,filter: "All" })
 
     try {
-      const res = await axios.get(`http://www.omdbapi.com/`, {
+      const res = await axios.get(`https://www.omdbapi.com/`, {
         params: {
           s: searchText,
           apikey: "73365880",
@@ -87,7 +87,7 @@ function Home({ handleFavorites, handleRemove, favorites }) {
       setMovies(contextMovies); // reset to full list
     } else {
       try {
-        let res = await axios.get(`http://www.omdbapi.com/`, {
+        let res = await axios.get(`https://www.omdbapi.com/`, {
           params: {
             s: queryOptions.search,
             type: filter.toLowerCase(),
@@ -128,7 +128,7 @@ function Home({ handleFavorites, handleRemove, favorites }) {
   if (queryOptions.filter !== "All") {
     params.type = queryOptions.filter.toLowerCase();
   }
-    const res = await axios.get("http://www.omdbapi.com/", { params });
+    const res = await axios.get("https://www.omdbapi.com/", { params });
     if (res.data && res.data.Search) {
       setMovies(res.data.Search);
       setCurrentPage(page);
