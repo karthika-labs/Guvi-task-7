@@ -10,7 +10,9 @@ import {UserProvider} from './MoviesContext'
 
 
 function App() {
-const [favorites,setFavorites]=useState([])
+const [favorites,setFavorites]=useState(()=>{
+  return JSON.parse(localStorage.getItem("favorites")) || [];
+})
 
 
 
@@ -30,6 +32,8 @@ const [favorites,setFavorites]=useState([])
    else{
      
     setFavorites([...favorites,movie])
+    localStorage.setItem("favorites", JSON.stringify([...favorites, movie]));
+
     
   };
 }
@@ -41,6 +45,7 @@ let handleRemove=(movie)=>{
     })
    copy.splice(index,1)
     setFavorites(copy)
+   localStorage.setItem("favorites", JSON.stringify(copy));
     console.log("favorites removed",copy)
 
 }
